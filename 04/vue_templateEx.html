@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.2/dist/vue.js" charset="utf-8"></script>
+    <script type="text/x-template" id="markup_tmp1">
+      <p>Hello, {{ name }}</p>
+    </script>
+    <script>
+      window.onload = function() {
+        // var vm = new Vue({
+        //   el: "div#markup",
+        //   template: "<h2>{{markup}}</h2>",
+        //   data: {
+        //     markup: "새로운 마크업"
+        //   }
+        // });
+        var vm = new Vue({
+          el: "#markup",
+          data: {
+            name: "Hanbit"
+          },
+          template: "#markup_tmp1"
+        });
+      }
+    </script>
+  </head>
+  <body>
+    <div id="markup">
+      <h1>Hello Markup</h1>
+    </div>
+  </body>
+</html>
