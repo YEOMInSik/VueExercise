@@ -12,16 +12,18 @@
         });
 
         var app = new Vue({
-          el: 'app',
+          el: '#app',
           deta: {
             message:'Hello Vue! from Parent',
-            anotherMsg:['propsdata',{props}]
+            methods: {anotherMsg: function(){this.$emit('propsdata');}}
           }
         });
       }
     </script>
   </head>
   <body>
-    <div id="app">{{message}}</div>
+    <div id="app">
+      <child-component v-bind:propsdata="message"></child-component>
+    </div>
   </body>
 </html>
