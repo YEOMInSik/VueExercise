@@ -1,0 +1,19 @@
+<script src="https://unpkg.com/vue"></script>
+<div id="app">
+  <ul v-for="object in arr">
+    <li v-for="item in object">{{ item }}</li>
+    <!-- <li v-for="(v,k) in object">{{ k }}: {{ v }}</li> -->
+  </ul>
+</div>
+<script>
+  var app = new Vue({
+    el: "#app",
+    data: {
+      arr:[
+        {firstName: 'Joongmin1',lastName: 'Lee',age: 39},
+        {firstName: 'Joongmin2',lastName: 'Lee',age: 39},
+        {firstName: 'Joongmin3',lastName: 'Lee',age: 39}
+      ]
+    }
+  });
+</script>
