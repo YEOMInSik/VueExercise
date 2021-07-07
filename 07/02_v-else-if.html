@@ -1,0 +1,14 @@
+<script src="https://unpkg.com/vue"></script>
+<div id="app">
+      <span v-if="id == 1">값이 True입니다.</span>
+      <span v-else-if="id == -1">값이 {{id == -1}}입니다.</span>
+      <span v-else-if="id == 100">값이 {{id == 100}}입니다.</span>
+      <span v-else-if="id == -100">값이 {{id == -100}}입니다.</span>
+      <span v-else-if="id == 0">값이 {{id == 0}}입니다.</span>
+</div>
+<script>
+  var app = new Vue({
+    el: "#app",
+    data: {id:0}
+  });
+  </script>
