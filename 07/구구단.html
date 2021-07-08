@@ -2,8 +2,8 @@
 <div id="app">
   <ul v-bind:style="{listStyle:'none'}" >
     <li v-for="i in 9"><span v-for="j in 8" v-if=" j <= 3 "> {{j+1}} * {{i}} = {{i*(j+1)<10?"0"+i*(j+1):i*(j+1)}} &nbsp </span></li><br>
-    <li v-for="i in 9"><span v-for="j in 3" v-if=" j <= 6 "> {{j+4}} * {{i}} = {{i*(j+4)<10?"0"+i*(j+4):i*(j+4)}} &nbsp </span></li><br>
-    <li v-for="i in 9"><span v-for="j in 2" v-if=" j <= 8 "> {{j+7}} * {{i}} = {{i*(j+7)<10?"0"+i*(j+7):i*(j+7)}} &nbsp </span></li>
+    <li v-for="i in 9"><span v-for="j in 3" > {{j+4}} * {{i}} = {{i*(j+4)<10?"0"+i*(j+4):i*(j+4)}} &nbsp </span></li><br>
+    <li v-for="i in 9"><span v-for="j in 2" > {{j+7}} * {{i}} = {{i*(j+7)<10?"0"+i*(j+7):i*(j+7)}} &nbsp </span></li>
     <!-- v-bind:style="{listStyle:'none'}" = 리스트스타일을 none으로 설정 -->
   </ul>
 </div>

@@ -1,17 +1,10 @@
 <script src="https://unpkg.com/vue"></script>
 <div id="example">
-  원본: {{message}}<br>
-  역순: {{reverseMessage}}
+  {{message.split('').reverse().join('')}}
 </div>
 <script>
-  var input = prompt('메세지를 입력하세요');
   var app = new Vue({
-    el: "#example",
-    data: {
-      message:input
-    },
-    computed: {reverseMessage: function(){
-      return this.message.split('').reverse().join('')
-    }}
+    el: '#example',
+    data: {message:'Hello Vue.js World'}
   });
 </script>
