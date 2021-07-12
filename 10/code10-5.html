@@ -2,6 +2,10 @@
 <script src="https://unpkg.com/vue"></script>
 <div id="app-5">
     <p>{{ message }}</p>
+    <input type="text" name="" v-bind:value="message" :style="{width: '400px'}"><br>
+    <!-- 단방향 바인딩 -->
+    <input type="text" name="" v-model:value="message" :style="{width: '400px'}"><br>
+    <!-- 양방향 바인딩 -->
     <button v-on:click="reverseMessage">메시지 뒤집기</button>
 </div>
 <script>
