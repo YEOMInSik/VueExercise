@@ -1,13 +1,24 @@
 <script src="https://unpkg.com/vue"></script>
 <div id="app">
-    <input type="checkbox" id="checkbox" v-model="checked">
-    <label for="checkbox">{{ checked }}</label>
+    <input type="checkbox" id="checkbox" v-bind:value="state" v-model="checked" 
+      v-on:click="change">
+    <label for="checkbox">{{ checked }} / {{state}}</label>
 </div>
 <script>
-    new Vue({
+    var vm = new Vue({
         el: "#app",
         data: {
-            checked: true
+            checked: false, state: 'off'
+        },
+        methods: {
+          change: function(){
+            // if(this.checked) this.state='off' else{this.state='on'}
+            this.state = (this.checked) ? 'off':'on';  //엘비스연산자를 사용
+            // if(this.checked == true){       //반전으로 출력
+            //   this.state = 'off'
+            // }
+            console.log(vm.checked + '/' + vm.state);
+          }
         }
     });
 </script>

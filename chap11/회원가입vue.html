@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Vue Sample</title>
+    <script src="https://unpkg.com/vue"></script>
+    <style media="screen">
+      * {margin: 0; padding: 0;}
+      .join {width: 600px; height: 800px; border: 1px solid black;
+            font-size: 15pt; }
+      h1 {text-align: center; font-size: 30pt; height: 100px;}
+      label {margin-left: 10px;font-size: 20pt;}
+    </style>
+    <script>
+      window.onload = function(){
+        new Vue({
+          el: "#app",
+          data: { joinbutton: function(){
+            if (this.id.value == "") alert("아이디를 확인 해주세요.");
+            if (this.pass.value == "") alert("비밀번호를 확인 해주세요.");
+            if (this.pass.value != this.pass2.value) alert("비밀번호가 일치하지않습니다.")
+            if (this.username.value == "") alert("이름을 확인 해주세요.");
+            if (this.mobile.value, this.mobile2.value == "") alert("전화번호를 확인 해주세요.");
+          }
+          }
+      });
+    }
+    </script>
+  </head>
+  <body>
+    <div id="app">
+      <form class="join" action="../index.html" method="post">
+      <h1>회원가입</h1>
+      <label for="">ID :</label>
+      <input type="text" name="id" value="" id="id" ><br>
+      <label for="">P/W :</label>
+      <input type="password" name="pass" value="" id="pass"><br>
+      <label for="">P/W확인 :</label>
+      <input type="password" name="pass2" id="pass2"><br>
+      <label for="">이름 :</label>
+      <input type="text" name="username" value="" id="username"><br>
+      <label for="">취미 :</label>
+      <input type="checkbox" name="hobby" value="A">
+      <label for="">A</label>
+      <input type="checkbox" name="hobby" value="B">
+      <label for="">B</label>
+      <input type="checkbox" name="hobby" value="C">
+      <label for="">C</label><br>
+      <label for="">성별 :</label>
+      <input type="radio" id="men" value="남" name="radio">
+      <label for="men">남</label>
+      <input type="radio" id="woman" value="여" name="radio">
+      <label for="woman">여</label><br>
+      <label for="">전화번호 :</label><br>
+      <select v-model="selected">
+          <option disabled value="">Please select one</option>
+          <option>010</option>
+          <option>016</option>
+          <option>018</option>
+          <option>011</option>
+      </select>
+      <input type="text" name="mobile" id="mobile" value="" maxlength="4">
+      <input type="text" name="mobile2" id="mobile2" value="" maxlength="4"><br>
+      <button type="button" name="joinbutton" @click="joinbutton">가입</button>
+      <button type="button" name="esc">취소</button>
+    </form>
+    </div>
+  </body>
+</html>
+<script>
+</script>

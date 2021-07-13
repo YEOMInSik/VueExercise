@@ -1,19 +1,20 @@
 <script src="https://unpkg.com/vue"></script>
 <div id="app">
-    <input type="checkbox" id="jack" value="Jack" v-model="checkedNames">
-    <label for="jack">Jack</label>
-    <input type="checkbox" id="john" value="John" v-model="checkedNames">
-    <label for="john">John</label>
-    <input type="checkbox" id="mike" value="Mike" v-model="checkedNames">
-    <label for="mike">Mike</label>
+    <input type="checkbox" id="jack" value="Soccer" v-model="hobby">
+    <label for="Soccer">Soccer</label>
+    <input type="checkbox" id="john" value="Baseball" v-model="hobby">
+    <label for="Baseball">Baseball</label>
+    <input type="checkbox" id="mike" value="Basketball" v-model="hobby">
+    <label for="Basketball">Basketball</label>
     <br>
-    <span>Checked names: {{ checkedNames }}</span>
+    <span>Checked names: {{ hobby }}</span>
 </div>
+<!-- checkbox의 v-model이 배열일 경우 checkbox의 value와 연결된다. -->
 <script>
     new Vue({
         el: "#app",
         data: {
-            checkedNames: ["Mike"]
+            hobby: ["Basketball"]  //기본으로 체크되어 있음
         }
     });
 </script>
