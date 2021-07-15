@@ -1,8 +1,8 @@
 <script src="https://unpkg.com/vue"></script>
 <div id="app">
   <ul v-for="object in arr">
-    <li v-for="item in object">{{ item }}</li>
-    <!-- <li v-for="(v,k) in object">{{ k }}: {{ v }}</li> -->
+    <!-- <li v-for="item in object">{{ item }}</li> -->
+    <li v-for="(v,k) in object">{{ k }}: {{ v }}</li>
   </ul>
 </div>
 <script>
